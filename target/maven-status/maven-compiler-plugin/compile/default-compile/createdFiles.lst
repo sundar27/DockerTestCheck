@@ -1,0 +1,5 @@
+com\Connector\triggerdetails\serviceimpl\getJSONServiceImpl.class
+com\Connector\triggerdetails\TriggerdetailsApplication.class
+com\Connector\triggerdetails\service\getJSONService.class
+com\Connector\triggerdetails\model\jSONModel.class
+com\Connector\triggerdetails\controller\triggercontroller.class
