@@ -1,0 +1,40 @@
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springhelloworlddepl
+spec:
+  selector:
+    matchLabels:
+      app: springhelloworld
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: springhelloworld
+    spec:
+      containers:
+      - name: springhelloworldcontainer
+        image: sundar2710/javahelloapp:11
+        resources:
+          limits:
+            memory: 2Gi
+            cpu: "1"
+          requests:
+            memory: 500Mi
+            cpu: 250m
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: springhelloworldsvc
+spec:
+  ports:
+    - name: springhellowroldport
+      port: 9000
+  type: LoadBalancer
+  selector:
+    app: springhelloworld
