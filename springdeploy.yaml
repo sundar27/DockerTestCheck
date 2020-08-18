@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: springhelloworldcontainer
-        image: sundar2710/javahelloapp:11
+        image: sundar2710/springboothello:latest
         resources:
           limits:
             memory: 2Gi
