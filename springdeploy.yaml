@@ -32,6 +32,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: springhelloworldsvc
+  namespace: meenakshisundaram-1447031
 spec:
   ports:
     - name: springhellowroldport
