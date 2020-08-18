@@ -37,6 +37,23 @@ spec:
   ports:
     - name: springhellowroldport
       port: 9000
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: springhelloworld
+
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: sundaringress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /sundar(/|$)(.*)
+            backend:
+              serviceName: springhelloworldsvc
+              servicePort: 9000
