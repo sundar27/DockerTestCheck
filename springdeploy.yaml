@@ -4,6 +4,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: springhelloworlddepl
+  namespace: meenakshisundaram-1447031
 spec:
   selector:
     matchLabels:
