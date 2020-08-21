@@ -1,4 +1,4 @@
 # DockerTestCheck
 
 
-we r gonna fail
+we r gonna pass
